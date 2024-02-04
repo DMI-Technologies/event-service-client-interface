@@ -1,6 +1,6 @@
 package org.malibento;
 
-class Test {
+public class Test {
     private String value;
 
     public String getValue() {

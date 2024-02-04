@@ -16,7 +16,7 @@ publishing {
         }
         publications {
             gpr(MavenPublication) {
-                version = '1.0.4'
+                version = '1.0.5'
                 groupId = 'org.malibento.clientinterface'
                 artifactId = 'event-service-client-interface'
                 from(components.java)
