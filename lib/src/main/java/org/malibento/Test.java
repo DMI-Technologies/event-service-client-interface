@@ -1,3 +1,5 @@
+package org.malibento;
+
 class Test {
     private String value;
 
