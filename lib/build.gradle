@@ -30,9 +30,9 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.16.1'
+
     testImplementation libs.junit
-    api libs.commons.math3
-    implementation libs.guava
 }
 
 java {
