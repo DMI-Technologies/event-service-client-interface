@@ -15,8 +15,8 @@ public class Error {
     }
 
     @JsonCreator
-    public Error(@JsonProperty final String detail,
-                 @JsonProperty final String title) {
+    public Error(@JsonProperty("detail") String detail,
+                 @JsonProperty("title") String title) {
         this.title = title;
         this.detail = detail;
     }
@@ -29,19 +29,22 @@ public class Error {
         return title;
     }
 
-    public Error setDetail(final String detail) {
+    public Error setDetail(String detail) {
         this.detail = detail;
         return this;
     }
 
-    public Error setTitle(final String title) {
+    public Error setTitle(String title) {
         this.title = title;
         return this;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Error error = (Error) o;
+        return Objects.equals(detail, error.detail) && Objects.equals(title, error.title);
     }
 
     @Override
